@@ -13,7 +13,11 @@ class Food {
             )
           : console.log(`${this.name} has spoiled.`);
       }
-    
+      
+      oneDayPassed() {
+        this.daysToSpoil -= 1;
+        this.fresh();
+      }
   
     prepare() {
       console.log(`${this.name} is being prepared`);
