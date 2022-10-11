@@ -5,7 +5,7 @@ class Food {
       this.fresh = fresh;
     }
 
-    fresh() {
+    isFresh() {
         this.daysToSpoil < 1 ? (this.fresh = false) : (this.fresh = true);
         this.daysToSpoil > 0
           ? console.log(
@@ -13,10 +13,10 @@ class Food {
             )
           : console.log(`${this.name} has spoiled.`);
       }
-      
-      oneDayPassed() {
+
+      aDayPasses() {
         this.daysToSpoil -= 1;
-        this.fresh();
+        this.isFresh();
       }
   
     prepare() {
